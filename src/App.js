@@ -38,9 +38,9 @@ function App() {
         -
       </p> */}
 
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <p>
+      {/* <p>
         -
       </p>
       
@@ -51,7 +51,7 @@ function App() {
         -
       </p>
 
-      <Body />
+      <Body /> */}
 
       {/* <Coordinates/> */}
 

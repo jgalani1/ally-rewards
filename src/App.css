@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: lightgrey;
+  background-color: #f2f2f2;
 }
 
 .App-logo {
@@ -47,6 +47,56 @@
 .ally-header-image {
   max-width: 100%;
   max-height: 100%;
+}
+
+.process1 {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+
+.process2 {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process2page {
+  background-color: #f2f2f2;
+}
+
+.process3 {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process3page {
+  background-color: #f2f2f2;
+}
+
+.process4 {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process4page {
+  background-color: #f2f2f2;
+}
+
+.body {
+  background-color: #f2f2f2;
+}
+
+.deals {
+  background-color: #f2f2f2;
 }
 
 /* Progress bar from react bootstrap */

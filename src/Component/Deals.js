@@ -10,7 +10,11 @@ class Deals extends Component {
         points: null,
         link: null,
         message: "New notification here",
-        deals: []
+        deals: [],
+        offers: [],
+        card: null,
+        offer: null,
+        reward: null
     }
 
     // url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=35.225480,-80.848550&radius=1500&type=restaurant,gas_station,supermarket,store,pet_store,loding&key=AIzaSyBRmajpUGlLdnzzoBWockX7LnjU3mJ3znU"
@@ -25,6 +29,15 @@ class Deals extends Component {
         this.setState({message: "New rewards deals near you!"})
     }
 
+    showOffers = async () => {
+        let result;
+        let response;
+        result = await fetch('http://localhost:8080/offerdata/all')
+        response = await result.json()
+        this.setState({offers : response})
+        this.setState({message: "New rewards deals near you!"})
+    }
+
     Deal = ({account, points, link}) => 
     <tr>
         <td>{account}</td>
@@ -32,8 +45,17 @@ class Deals extends Component {
         <td>{link}</td>
     </tr>
 
+    Offer = ({card, offer, reward}) => 
+    <tr>
+        <td>{card}</td>
+        <td>{offer}</td>
+        <td>{reward}</td>
+    </tr>
+
+
     componentDidMount() {
         this.showDeals()
+        this.showOffers()
     }
 
     
@@ -43,10 +65,13 @@ class Deals extends Component {
             <div className="deals">
             <img className='ally-header-image' src={AllyHeaderImage}/>
             
-            <h1>My Rewards</h1>
+            <h1>Reward Zone</h1>
 
-            <Search changer={this.showDeals} />
+            {/* <Search changer={this.showDeals} /> */}
+
             {/* <button onClick={this.showDeals}> Show Deals</button> */}
+
+            
 
             <h2>My Points</h2>
 
@@ -68,13 +93,13 @@ class Deals extends Component {
             <Table> 
                     <thead>
                         <tr>
-                            <th>Account</th>
-                            <th>Reward PTS</th>
-                            <th>Link</th>
+                            <th>Card</th>
+                            <th>Offer</th>
+                            <th>Reward</th>
                         </tr>
                     </thead>
                     <tbody>
-                         {this.state.deals.map(deals => <this.Deal key={deals.id} account={deals.account} points={deals.points} link={deals.link} />)}
+                         {this.state.offers.map(offers => <this.Offer key={offers.id} card={offers.card} offer={offers.offer} reward={offers.reward} />)}
                     </tbody>
             </Table>
 

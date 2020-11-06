@@ -92,7 +92,7 @@ class Body extends Component {
 
     render () {
         return (
-            <div>
+            <div className="body">
                 <h1> Transaction History </h1>
                 {/* <p>
                     Date: <input value= {this.state.date} onChange= {this.updateDate} />

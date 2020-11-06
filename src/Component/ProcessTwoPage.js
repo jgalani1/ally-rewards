@@ -5,7 +5,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 class ProcessTwoPage extends React.Component {
     render() {
         return (
-            <div>
+            <div className="process2page">
                 <Link to="/processthreepage">
                 <img className='process2' src={ProcessTwo}/>
                 </Link>
