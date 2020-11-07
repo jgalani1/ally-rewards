@@ -3,6 +3,7 @@ import {FormControl, InputGroup, ProgressBar, Table} from 'react-bootstrap';
 import SpendingTracker from './SpendingTracker.png';
 import Progressbar from './Progressbar.js';
 import { withRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const place_one_progress = 60;
 // const place_two_progress = 40;
@@ -121,6 +122,39 @@ class Body extends Component {
                 </Table>
 
                 <img className='image' src={SpendingTracker}/>
+
+                <h2> New Table Test </h2>
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                    </table>
 
                 {/* <p className='topPlaces'>
                     My Top 5 Places:
